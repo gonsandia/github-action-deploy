@@ -1,0 +1,35 @@
+# action.yml
+name: 'github-action-deploy'
+description: 'Continuous integration action'
+inputs:
+  SSH_HOST:
+    description: 'SSH HOST'
+    required: true
+  SSH_USER:
+    description: 'SSH USERNAME'
+    required: true
+  SSH_KEY:
+    description: 'SSH KEY'
+    required: false
+  SSH_PASSWORD:
+    description: 'SSH PASSWORD'
+    required: false
+  SSH_PORT:
+    description: 'SSH PORT'
+    required: false
+    default: '22'
+outputs:
+  time: # id of output
+    description: 'The time we greeted you'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.SSH_HOST }}
+    - ${{ inputs.SSH_USER }}
+    - ${{ inputs.SSH_KEY }}
+    - ${{ inputs.SSH_PASSWORD }}
+    - ${{ inputs.SSH_PORT }}
+branding:
+  icon: 'tag'
+  color: 'green'
