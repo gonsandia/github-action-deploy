@@ -6,7 +6,6 @@
     with:
       SSH_USER: ${{ secrets.STAGING_SSH_USER }}
       SSH_HOST: ${{ secrets.STAGING_SSH_HOST }}
-      WORKDIR: ${{ secrets.STAGING_WORKDIR }}
       SSH_PASSWORD: ${{ secrets.STAGING_SSH_PASSWORD }}
       SSH_KEY: ${{ secrets.STAGING_SSH_KEY }}
       SSH_PORT: ${{ secrets.STAGING_SSH_PORT }}
