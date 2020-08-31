@@ -16,6 +16,7 @@ main() {
 
   format::echoTitle "Prepare deploy script"
   echo "$INPUT_SSH_SCRIPT" | cat > $HOME_DIR/src/deploy.sh
+  cat $HOME_DIR/src/deploy.sh
 
   format::echoTitle "Provisioning virtual machine..."
 
