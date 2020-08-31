@@ -9,7 +9,7 @@ inputs:
     description: 'SSH USERNAME'
     required: true
   SSH_SCRIPT:
-    description: 'DEPLOY SCRIPT'
+    description: 'SHH DEPLOY SCRIPT'
     required: true
   SSH_KEY:
     description: 'SSH KEY'

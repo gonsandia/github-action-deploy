@@ -7,7 +7,7 @@ main() {
   ensure::env_variable_exist "INPUT_SSH_USER"
   ensure::env_variable_exist "INPUT_SSH_HOST"
   ensure::env_variable_exist "INPUT_SSH_PORT"
-  ensure::env_variable_exist "INPUT_SCRIPT"
+  ensure::env_variable_exist "INPUT_SSH_SCRIPT"
 
   if [[ -z "$INPUT_SSH_HOST" ]]; then
     format::echoTitle "Building"
@@ -16,7 +16,7 @@ main() {
 
   format::echoTitle "Prepare deploy script"
 
-  echo $INPUT_SCRIPT | cat > $HOME_DIR/src/deploy.sh
+  echo $INPUT_SSH_SCRIPT | cat > $HOME_DIR/src/deploy.sh
 
   format::echoTitle "Provisioning virtual machine..."
 
