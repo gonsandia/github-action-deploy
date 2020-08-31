@@ -8,6 +8,9 @@ inputs:
   SSH_USER:
     description: 'SSH USERNAME'
     required: true
+  SSH_SCRIPT:
+    description: 'DEPLOY SCRIPT'
+    required: true
   SSH_KEY:
     description: 'SSH KEY'
     required: false
@@ -27,6 +30,7 @@ runs:
   args:
     - ${{ inputs.SSH_HOST }}
     - ${{ inputs.SSH_USER }}
+    - ${{ inputs.SSH_SCRIPT }}
     - ${{ inputs.SSH_KEY }}
     - ${{ inputs.SSH_PASSWORD }}
     - ${{ inputs.SSH_PORT }}
