@@ -14,9 +14,9 @@ main() {
     exit 0
   fi
 
-  format::echoTitle "Prepare deploy script"
-
-  echo $INPUT_SSH_SCRIPT | cat > $HOME_DIR/src/deploy.sh
+#  format::echoTitle "Prepare deploy script"
+#
+#  echo $INPUT_SSH_SCRIPT | cat > $HOME_DIR/src/deploy.sh
 
   format::echoTitle "Provisioning virtual machine..."
 
@@ -26,7 +26,7 @@ main() {
     mkdir -p ~/.ssh/
     echo "$INPUT_SSH_KEY" > ~/.ssh/id_rsa
     chmod 600 ~/.ssh/id_rsa
-    cat $HOME_DIR/src/deploy.sh | ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa $SSH_USER@$SSH_HOST -p $INPUT_SSH_PORT
+    cat $INPUT_SSH_SCRIPT | ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa $SSH_USER@$SSH_HOST -p $INPUT_SSH_PORT
   else
     ensure::env_variable_exist "INPUT_SSH_PASSWORD"
 
