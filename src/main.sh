@@ -15,8 +15,9 @@ main() {
   fi
 
   format::echoTitle "Prepare deploy script"
-  echo -e $INPUT_SSH_SCRIPT | cat > $HOME_DIR/src/deploy.sh
+  echo -n $INPUT_SSH_SCRIPT | cat > $HOME_DIR/src/deploy.sh
 
+  echo -n $INPUT_SSH_SCRIPT
   cat $HOME_DIR/src/deploy.sh
 
   format::echoTitle "Provisioning virtual machine..."
