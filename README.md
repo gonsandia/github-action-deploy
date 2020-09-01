@@ -2,7 +2,7 @@
 
 ## Example usage
 
-  jobs:
+  `jobs:
     build:
       runs-on: ubuntu-latest
       defaults:
@@ -24,7 +24,7 @@
               cd ./www
               cp ~/secret/.env.prod .env
               /home/gonzalosantos/.bin/php ../../composer.phar update --prefer-dist --no-scripts --optimize-autoloader
-              /home/gonzalosantos/.bin/php ../../composer.phar run-script auto-scripts
+              /home/gonzalosantos/.bin/php ../../composer.phar run-script auto-scripts`
 
 ### Local Launch
 
