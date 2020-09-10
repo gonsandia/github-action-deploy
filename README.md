@@ -2,6 +2,7 @@
 
 ## Example usage
 
+    - name: 'Deploy'
     uses: gonsandia/github-action-deploy
     with:
       SSH_USER: ${{ secrets.STAGING_SSH_USER }}
