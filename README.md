@@ -3,6 +3,18 @@ github action for automatic deployment of through ssh
 
 ## Example usage
 
+    on:
+      push:
+        branches: [ master ]
+      pull_request:
+        branches: [ master ]
+
+    jobs:
+      build:
+        runs-on: ubuntu-latest
+        defaults:
+          run:
+            working-directory: ./www
     - name: 'Deploy'
     uses: gonsandia/github-action-deploy
     with:
