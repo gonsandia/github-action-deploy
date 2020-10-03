@@ -14,9 +14,6 @@ github action for automatic deployment of through ssh
     jobs:
       build:
         runs-on: ubuntu-latest
-        defaults:
-          run:
-            working-directory: ./www
         steps:
           - name: 'Deploy'
             uses: gonsandia/github-action-deploy@master
