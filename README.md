@@ -1,5 +1,5 @@
 # github-action-deploy
-github action for automatic deployment of through ssh
+github action for simple automatic deployment of through ssh
 
 ## Example usage
 
